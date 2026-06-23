@@ -62,7 +62,10 @@
 
   .why{margin-top:22px;padding-top:20px;border-top:1px dashed var(--box-edge);
     display:flex;align-items:center;justify-content:center;gap:14px;text-align:center;
-    font-size:29px;color:var(--muted);font-weight:500;line-height:1.25}
+    font-size:29px;color:var(--muted);font-weight:500;line-height:1.25;
+    opacity:0;transform:translateY(10px);
+    transition:opacity .6s ease, transform .6s cubic-bezier(.2,1,.4,1)}
+  .why.visible{opacity:1;transform:translateY(0)}
   .why .tick{flex:0 0 auto;font-family:'Archivo',sans-serif;font-weight:800;font-size:20px;letter-spacing:1px;
     color:var(--night);background:var(--iris);padding:5px 11px;border-radius:7px}
   .why .txt{text-align:center}
@@ -193,13 +196,37 @@ const FLAGS = {"mx": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"ht
     if(need>avail+1) inner.style.transform='scale('+(avail/need).toFixed(4)+')';
   }
 
-  function reset(){document.querySelectorAll('.box').forEach(b=>{b.classList.add('hidden');b.classList.remove('flash')})}
+  // ⏱ Tiempos de animación — editá estos tres números a gusto
+  const CARD_INTERVAL = 2200; // ms entre el inicio de cada partido
+  const WHY_TO_SCORE  = 1600; // ms desde que aparece el porqué hasta el marcador
+  const SCORE_STAGGER =  350; // ms entre gol local y gol visitante
+
+  function reset(){
+    document.querySelectorAll('.box').forEach(b=>{b.classList.add('hidden');b.classList.remove('flash')});
+    document.querySelectorAll('.why').forEach(w=>w.classList.remove('visible'));
+  }
 
   function play(){
-    const boxes=[...document.querySelectorAll('.box')];reset();
-    boxes.forEach((b,k)=>{
-      const d=reduce?0:140+k*180;
-      setTimeout(()=>{b.classList.remove('hidden');b.classList.add('flash');setTimeout(()=>b.classList.remove('flash'),550)},d);
+    reset();
+    const noWhy=document.body.classList.contains('no-why');
+    const cards=[...cardsEl.querySelectorAll('.card')];
+    cards.forEach((card,i)=>{
+      const boxes=[...card.querySelectorAll('.box')];
+      const why=card.querySelector('.why');
+      if(reduce){
+        if(why) why.classList.add('visible');
+        boxes.forEach(b=>{b.classList.remove('hidden');b.classList.add('flash');setTimeout(()=>b.classList.remove('flash'),550)});
+        return;
+      }
+      const t0=i*CARD_INTERVAL;
+      // 1. el porqué
+      if(why&&!noWhy) setTimeout(()=>why.classList.add('visible'), t0);
+      // 2. marcador: local primero, luego visitante
+      const ts=t0+(noWhy?400:WHY_TO_SCORE);
+      boxes.forEach((b,j)=>setTimeout(()=>{
+        b.classList.remove('hidden');b.classList.add('flash');
+        setTimeout(()=>b.classList.remove('flash'),550);
+      }, ts+j*SCORE_STAGGER));
     });
   }
 
