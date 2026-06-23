@@ -1,0 +1,1 @@
+git add partidos.json && git commit -m "$(date +%d\ %b)" && git push
