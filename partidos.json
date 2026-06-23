@@ -2,15 +2,15 @@
   "_ayuda": "Editá 'meta' y 'partidos'. La cantidad de partidos es libre (1 a 6): el tablero se centra y se ajusta solo. code = país de 2 letras. Selecciones del Mundial: ar at dz jo | fr sn no iq | es uy sa cv | be eg ir nz | de ec ci cw | nl jp se tn | br ma gb-sct ht | us py au tr | mx za kr cz | ca ch ba qa | pt co uz cd | gb-eng hr gh pa. Para dejar un partido sin 'por qué', borrá esa línea o poné \"why\": \"\".",
 
   "meta": {
-    "fecha": "22 JUN",
+    "fecha": "23 JUN",
     "handle": "@elojo.fc",
     "tag": "el ojo que clava el marcador"
   },
 
   "partidos": [
-    { "a": { "name": "Argentina", "code": "ar" }, "b": { "name": "Austria", "code": "at" }, "ga": 2, "gb": 0, "why": "No recibe gol hace 8 partidos." },
-    { "a": { "name": "Francia", "code": "fr" }, "b": { "name": "Irak", "code": "iq" }, "ga": 3, "gb": 0, "why": "Ataque demoledor vs una zaga que filtra." },
-    { "a": { "name": "Noruega", "code": "no" }, "b": { "name": "Senegal", "code": "sn" }, "ga": 2, "gb": 1, "why": "Haaland define; Senegal crea y no concreta." },
-    { "a": { "name": "Jordania", "code": "jo" }, "b": { "name": "Argelia", "code": "dz" }, "ga": 1, "gb": 2, "why": "Pólvora completa, pero el arquero regala." }
+    { "a": { "name": "Portugal", "code": "pt" }, "b": { "name": "Uzbekistan", "code": "uz" }, "ga": 2, "gb": 1, "why": "Portugal sale a buscarlo; Uzbekistan saca su contra." },
+    { "a": { "name": "Inglaterra", "code": "gb-eng" }, "b": { "name": "Ghana", "code": "gh" }, "ga": 2, "gb": 1, "why": "Inglaterra golea y concede." },
+    { "a": { "name": "Panama", "code": "pa" }, "b": { "name": "Croacia", "code": "hr" }, "ga": 1, "gb": 2, "why": "Croacia obligada; Panama se funde en el 2T." },
+    { "a": { "name": "Colombia", "code": "co" }, "b": { "name": "RD Congo", "code": "cd" }, "ga": 2, "gb": 1, "why": "Colombia ataca; el bus de Congo saca su gol." }
   ]
 }
