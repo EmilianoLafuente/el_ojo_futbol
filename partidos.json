@@ -8,9 +8,9 @@
   },
 
   "partidos": [
-    { "a": { "name": "Portugal", "code": "pt" }, "b": { "name": "Uzbekistan", "code": "uz" }, "ga": 2, "gb": 1, "why": "Portugal sale a buscarlo; Uzbekistan saca su contra." },
-    { "a": { "name": "Inglaterra", "code": "gb-eng" }, "b": { "name": "Ghana", "code": "gh" }, "ga": 2, "gb": 1, "why": "Inglaterra golea y concede." },
-    { "a": { "name": "Panama", "code": "pa" }, "b": { "name": "Croacia", "code": "hr" }, "ga": 1, "gb": 2, "why": "Croacia obligada; Panama se funde en el 2T." },
-    { "a": { "name": "Colombia", "code": "co" }, "b": { "name": "RD Congo", "code": "cd" }, "ga": 2, "gb": 1, "why": "Colombia ataca; el bus de Congo saca su gol." }
+    { "a": { "name": "Portugal", "code": "pt" }, "b": { "name": "Uzbekistan", "code": "uz" }, "ga": 2, "gb": 1, "why": "Portugal sale con todo su ataque tras el flojo 1-1 con Congo, pero no tiene valla de élite y Uzbekistán ya mostró contra real con Fayzullaev." },
+    { "a": { "name": "Inglaterra", "code": "gb-eng" }, "b": { "name": "Ghana", "code": "gh" }, "ga": 2, "gb": 1, "why": "Inglaterra presiona y marca, pero también encaja (le hicieron 2 Croacia); Ghana recupera a Williams y puede picar de contra." },
+    { "a": { "name": "Panama", "code": "pa" }, "b": { "name": "Croacia", "code": "hr" }, "ga": 1, "gb": 2, "why": "Croacia llega obligada tras caer con Inglaterra y es superior; Panamá arranca activo pero se apaga en el complemento." },
+    { "a": { "name": "Colombia", "code": "co" }, "b": { "name": "RD Congo", "code": "cd" }, "ga": 2, "gb": 1, "why": "Colombia ataca con su 4-2-3-1 pero no es muro atrás, y el bus de Congo ya le marcó a Portugal de contra." }
   ]
 }

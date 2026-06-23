@@ -49,8 +49,8 @@
   .flag{width:100px;height:75px;flex:0 0 auto;border-radius:11px;overflow:hidden;
     border:1px solid rgba(0,0,0,.14);box-shadow:0 4px 10px rgba(0,0,0,.18);background:#dfe3e8}
   .flag svg{width:100%;height:100%;display:block}
-  .name{font-family:'Archivo',sans-serif;font-weight:800;font-size:36px;color:var(--text);
-    line-height:1.1;letter-spacing:-.5px;min-width:0;overflow-wrap:break-word;word-break:break-word}
+  .name{font-family:'Archivo',sans-serif;font-weight:800;font-size:38px;color:var(--text);
+    line-height:1.1;letter-spacing:-.5px;min-width:0;white-space:nowrap}
 
   .score{display:flex;align-items:center;gap:14px}
   .box{width:104px;height:118px;background:var(--box);border:2px solid var(--box-edge);border-radius:16px;
@@ -187,7 +187,19 @@ const FLAGS = {"mx": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"ht
     document.getElementById('fecha').textContent=META.fecha||'—';
     document.getElementById('handle').textContent=META.handle||'@elojo.fc';
     document.getElementById('tag').textContent=META.tag||'';
+    fitNames();
     fitCards();
+  }
+
+  function fitNames(){
+    // auto-reduce font for long names so they never break mid-word
+    document.querySelectorAll('.name').forEach(el=>{
+      el.style.fontSize='38px';
+      const avail=el.parentElement.clientWidth-124; // parent minus flag(100)+gap(20)+border(4)
+      if(avail<=0) return;
+      let fs=38;
+      while(el.scrollWidth>avail+1 && fs>20){ fs--; el.style.fontSize=fs+'px'; }
+    });
   }
 
   function fitCards(){
