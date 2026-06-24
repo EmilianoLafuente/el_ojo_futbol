@@ -2,14 +2,17 @@
   "_ayuda": "Editá 'meta' y 'partidos'. La cantidad de partidos es libre (1 a 6): el tablero se centra y se ajusta solo. code = país de 2 letras. Selecciones del Mundial: ar at dz jo | fr sn no iq | es uy sa cv | be eg ir nz | de ec ci cw | nl jp se tn | br ma gb-sct ht | us py au tr | mx za kr cz | ca ch ba qa | pt co uz cd | gb-eng hr gh pa. Para dejar un partido sin 'por qué', borrá esa línea o poné \"why\": \"\".",
 
   "meta": {
-    "fecha": "23 JUN",
+    "fecha": "24 JUN",
     "handle": "@elojo.fc",
     "tag": "el ojo que clava el marcador"
   },
 
   "partidos": [
-    { "a": { "name": "Portugal", "code": "pt" }, "b": { "name": "Uzbekistan", "code": "uz" }, "ga": 2, "gb": 1, "why": "❌ Fallamos por lejos. Portugal sorprende con 5-0; el debut fue solo un mal partido." },
-    { "a": { "name": "Inglaterra", "code": "gb-eng" }, "b": { "name": "Ghana", "code": "gh" }, "ga": 3, "gb": 1, "why": "Inglaterra presiona y marca, pero también encaja (le hicieron 2 Croacia); Ghana recupera a Williams y puede picar de contra. Mirando los onces confirmados, pasamos de 2-1 a 3-1" }
-
+    { "a": { "name": "Suiza", "code": "ch" }, "b": { "name": "Canada", "code": "ca" }, "ga": 1, "gb": 1, "why": "Están parejos y a los dos les sirve el empate" },
+    { "a": { "name": "Bosnia", "code": "ba" }, "b": { "name": "Qatar", "code": "qa" }, "ga": 2, "gb": 1, "why": "Final a matar o morir; dos zagas rotas, Bosnia tiene más jerarquía." },
+    { "a": { "name": "Escocia", "code": "gb-sct" }, "b": { "name": "Brasil", "code": "br" }, "ga": 0, "gb": 2, "why": "Escocia se atrinchera buscando el empate para clasificar; Vinicius rompe el cerrojo en el calor de Miami." },
+    { "a": { "name": "Marruecos", "code": "ma" }, "b": { "name": "Haiti", "code": "ht" }, "ga": 3, "gb": 0, "why": "Marruecos caza la diferencia de gol; Haiti ya no tiene con que." },
+    { "a": { "name": "Chequia", "code": "cz" }, "b": { "name": "Mexico", "code": "mx" }, "ga": 0, "gb": 1, "why": "La altura del Azteca ahoga a Chequia; Mexico lo administra de local." },
+    { "a": { "name": "Sudafrica", "code": "za" }, "b": { "name": "Corea", "code": "kr" }, "ga": 1, "gb": 2, "why": "Sudáfrica intenta, pero no puede; le faltan jugadores. Son la mata de contragolpe." }
   ]
 }
